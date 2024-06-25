@@ -12,3 +12,4 @@ fn main() raises:
     window.show()
     print("size", window.size(), "active", window.isActive(), "winid", window.winId())
     sys.exit(app.exec())
+    _ = window
