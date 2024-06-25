@@ -6,15 +6,7 @@ Window {
     width: 300
     height: 200
     visible: true
-    title: "Hello World"
-
-    readonly property list<string> texts: ["Hallo Welt", "Hei maailma",
-                                           "Hola Mundo", "Привет мир"]
-
-    function setText() {
-        var i = Math.round(Math.random() * 3)
-        text.text = texts[i]
-    }
+    title: "Hello Mojo"
 
     ColumnLayout {
         anchors.fill:  parent
@@ -27,7 +19,7 @@ Window {
         Button {
             text: "Click me"
             Layout.alignment: Qt.AlignHCenter
-            onClicked:  setText()
+            onClicked: on_clicked.invoke()
         }
     }
 }
