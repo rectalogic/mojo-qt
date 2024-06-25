@@ -6,8 +6,9 @@ fn main() raises:
     var argv: PythonObject = [sys.argv()[0]]
     var app = QtGui.QGuiApplication(argv)
     var window = QtGui.QWindow()
+    window.setTitle("Mojo window")
     window.resize(100, 100)
     window.requestActivate()
-    print("size", window.size(), "active", window.isActive())
     window.show()
+    print("size", window.size(), "active", window.isActive(), "winid", window.winId())
     sys.exit(app.exec())
